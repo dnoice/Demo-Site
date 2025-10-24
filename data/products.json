@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Dodgers Table Lamp",
+    "category": "lamps",
+    "price": 65,
+    "description": "Handcrafted table lamp featuring authentic Dodgers design elements. Perfect for the home or office.",
+    "image": "./assets/images/products/lamp-01.jpg",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Stadium Miniature Keychain",
+    "category": "keychains",
+    "price": 12,
+    "description": "Detailed miniature stadium keychain made from premium materials. A perfect gift for any fan.",
+    "image": "./assets/images/products/keychain-01.jpg",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Vintage Baseball Desk Lamp",
+    "category": "lamps",
+    "price": 48,
+    "description": "Unique desk lamp with vintage baseball design. Adds character to any workspace.",
+    "image": "./assets/images/products/lamp-02.jpg",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Team Cap Keychain",
+    "category": "keychains",
+    "price": 8,
+    "description": "Miniature team cap keychain, meticulously crafted with attention to detail.",
+    "image": "./assets/images/products/keychain-02.jpg",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Dodgers Coaster Set",
+    "category": "novelty",
+    "price": 24,
+    "description": "Set of 4 handcrafted coasters featuring team colors and logo. Protects surfaces in style.",
+    "image": "./assets/images/products/novelty-01.jpg",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Baseball Bat Bottle Opener",
+    "category": "novelty",
+    "price": 18,
+    "description": "Functional bottle opener shaped like a miniature baseball bat. Great conversation starter.",
+    "image": "./assets/images/products/novelty-02.jpg",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Night Light with Team Logo",
+    "category": "lamps",
+    "price": 32,
+    "description": "Soft LED night light featuring team logo. Perfect for bedrooms or hallways.",
+    "image": "./assets/images/products/lamp-03.jpg",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Pennant Keychain",
+    "category": "keychains",
+    "price": 10,
+    "description": "Classic pennant design miniaturized into a quality keychain accessory.",
+    "image": "./assets/images/products/keychain-03.jpg",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Vintage Stadium Clock",
+    "category": "novelty",
+    "price": 48,
+    "description": "Wall clock featuring vintage stadium imagery. Functional art for true fans.",
+    "image": "./assets/images/products/novelty-03.jpg",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Baseball Bat Keychain",
+    "category": "keychains",
+    "price": 15,
+    "description": "Detailed miniature baseball bat keychain with authentic wood finish.",
+    "image": "./assets/images/products/keychain-04.jpg",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Custom Card Holder",
+    "category": "other",
+    "price": 42,
+    "description": "Handcrafted card holder with team design. Keeps cards organized in style.",
+    "image": "./assets/images/products/other-01.jpg",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "Stadium Blueprint Art",
+    "category": "other",
+    "price": 55,
+    "description": "Framed blueprint-style art of the stadium. Unique wall decor for fans.",
+    "image": "./assets/images/products/other-02.jpg",
+    "featured": true
+  }
+]
