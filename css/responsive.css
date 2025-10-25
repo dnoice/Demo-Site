@@ -1,0 +1,382 @@
+/* Responsive Design - Media Queries */
+
+/* ===== TABLET (640px and up) ===== */
+@media (min-width: 640px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--text-6xl);
+    }
+
+    h2 {
+        font-size: var(--text-5xl);
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: var(--text-6xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-2xl);
+    }
+
+    /* Product Grid */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    /* Gallery Grid */
+    .gallery__grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    /* Contact Grid */
+    .contact__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Bottom */
+    .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* ===== DESKTOP (768px and up) ===== */
+@media (min-width: 768px) {
+    /* Navigation - Show horizontal menu */
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        position: static;
+        transform: translateX(0);
+        flex-direction: row;
+        padding: 0;
+        background-color: transparent;
+        gap: var(--space-2);
+    }
+
+    .nav__item {
+        width: auto;
+    }
+
+    .nav__link {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-base);
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: var(--space-24);
+        padding-bottom: var(--space-24);
+    }
+
+    .hero__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* About Section - Two column layout */
+    .about__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Product Grid */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    /* Gallery Grid */
+    .gallery__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact__grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* ===== LARGE DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+    /* Section spacing increased */
+    section {
+        padding-top: var(--space-24);
+        padding-bottom: var(--space-24);
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    /* Product Grid - 3 columns minimum */
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Product Filters - Larger buttons */
+    .filter-button {
+        padding: var(--space-4) var(--space-8);
+        font-size: var(--text-lg);
+    }
+
+    /* About Features - Horizontal layout */
+    .about__features {
+        flex-direction: row;
+    }
+
+    /* Gallery Grid */
+    .gallery__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Footer Grid - 4 columns */
+    .footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    /* Modal Image - Larger */
+    .modal__image {
+        max-height: 85vh;
+    }
+
+    .modal__controls {
+        padding: 0 var(--space-8);
+    }
+
+    .modal__control {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* ===== EXTRA LARGE DESKTOP (1280px and up) ===== */
+@media (min-width: 1280px) {
+    /* Container max-width already set in variables */
+
+    /* Product Grid - 4 columns */
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Hero Stats - Larger gap */
+    .hero__stats {
+        gap: var(--space-8);
+    }
+
+    /* Stat Cards - Larger */
+    .stat-card {
+        padding: var(--space-8);
+    }
+
+    .stat-card__icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 48px;
+        padding: var(--space-4) var(--space-8);
+    }
+
+    .nav__link {
+        min-height: 48px;
+    }
+
+    /* Remove hover transforms on touch devices */
+    .product-card:hover,
+    .stat-card:hover,
+    .card:hover {
+        transform: none;
+    }
+
+    /* Gallery - Show overlay by default on touch */
+    .gallery__overlay {
+        opacity: 1;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    /* Hide navigation, footer, and interactive elements */
+    .header,
+    .nav,
+    .footer,
+    .back-to-top,
+    .modal,
+    .btn,
+    .filter-button,
+    .carousel-controls,
+    .carousel-dots {
+        display: none !important;
+    }
+
+    /* Ensure good contrast */
+    body {
+        color: black;
+        background: white;
+    }
+
+    /* Prevent page breaks inside cards */
+    .product-card,
+    .testimonial-card,
+    .stat-card {
+        page-break-inside: avoid;
+    }
+
+    /* Show links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+    /* Increase border contrast */
+    .btn,
+    .form-input,
+    .form-textarea,
+    .filter-button {
+        border-width: 3px;
+    }
+
+    /* Stronger shadows */
+    .card,
+    .product-card,
+    .stat-card {
+        box-shadow: 0 0 0 2px var(--color-gray-900);
+    }
+}
+
+/* ===== DARK MODE (System Preference) ===== */
+@media (prefers-color-scheme: dark) {
+    /* Adjust image brightness slightly */
+    img {
+        opacity: 0.9;
+    }
+
+    /* Adjust shadows for dark mode */
+    .card,
+    .product-card,
+    .stat-card,
+    .contact-form {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Featured banner contrast */
+    .featured-banner {
+        background-color: var(--color-primary-600);
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* Reduce vertical padding */
+    section {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+
+    .hero {
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-12);
+    }
+
+    /* Reduce hero title size */
+    .hero__title {
+        font-size: var(--text-3xl);
+    }
+
+    /* Hide mobile menu */
+    .nav__menu {
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+    }
+}
+
+/* ===== SMALL MOBILE (max 360px) ===== */
+@media (max-width: 360px) {
+    /* Reduce font sizes slightly */
+    .hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-lg);
+    }
+
+    /* Stack hero actions */
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    /* Reduce product grid columns */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery - 2 columns on very small screens */
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+
+    /* Reduce padding */
+    .container {
+        padding-left: var(--space-3);
+        padding-right: var(--space-3);
+    }
+}
+
+/* ===== ACCESSIBILITY - REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations and transitions */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Stop auto-scrolling banner */
+    .featured-banner__scroller {
+        animation: none;
+    }
+
+    /* Remove transforms */
+    .product-card:hover,
+    .stat-card:hover,
+    .btn:hover,
+    .social-link:hover {
+        transform: none;
+    }
+}
+
+/* ===== ULTRA-WIDE SCREENS (1920px+) ===== */
+@media (min-width: 1920px) {
+    /* Increase base font size slightly for readability */
+    :root {
+        font-size: 18px;
+    }
+
+    /* Limit container even more on ultra-wide */
+    .container {
+        max-width: 1400px;
+    }
+
+    /* Product Grid - Max 4 columns even on ultra-wide */
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-12);
+    }
+}

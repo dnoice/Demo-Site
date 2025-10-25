@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/gallery/item-01.jpg",
+    "caption": "Custom Dodgers lamp in progress",
+    "alt": "Handcrafted Dodgers lamp being assembled in workshop"
+  },
+  {
+    "id": 2,
+    "image": "./assets/images/gallery/item-02.jpg",
+    "caption": "Keychain collection",
+    "alt": "Various handcrafted Dodgers keychains on display"
+  },
+  {
+    "id": 3,
+    "image": "./assets/images/gallery/item-03.jpg",
+    "caption": "Workshop detail",
+    "alt": "Close-up of crafting tools and materials"
+  },
+  {
+    "id": 4,
+    "image": "./assets/images/gallery/item-04.jpg",
+    "caption": "Finished lamp display",
+    "alt": "Completed Dodgers lamp on display"
+  },
+  {
+    "id": 5,
+    "image": "./assets/images/gallery/item-05.jpg",
+    "caption": "Novelty items collection",
+    "alt": "Assortment of novelty Dodgers items"
+  },
+  {
+    "id": 6,
+    "image": "./assets/images/gallery/item-06.jpg",
+    "caption": "Custom order in progress",
+    "alt": "Custom Dodgers merchandise being crafted"
+  },
+  {
+    "id": 7,
+    "image": "./assets/images/gallery/item-07.jpg",
+    "caption": "Paint and finish details",
+    "alt": "Detailed painting work on merchandise"
+  },
+  {
+    "id": 8,
+    "image": "./assets/images/gallery/item-08.jpg",
+    "caption": "Final product showcase",
+    "alt": "Showcase of finished handcrafted products"
+  }
+]

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danny's Dodgers Crafts - Handcrafted Dodgers-themed merchandise including lamps, keychains, and novelty items. Veteran-owned, Los Angeles based.">
+    <meta name="keywords" content="Dodgers crafts, handmade merchandise, Los Angeles, veteran-owned, custom lamps, keychains">
+    <meta name="author" content="Danny Barcelo">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Danny's Dodgers Crafts - Handcrafted Merchandise with Heart">
+    <meta property="og:description" content="Unique handcrafted Dodgers-themed merchandise. Veteran-owned small business in Los Angeles.">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+
+    <title>Danny's Dodgers Crafts - Handcrafted Merchandise with Heart</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav__brand">
+                    <a href="#home" class="nav__logo" aria-label="Danny's Dodgers Crafts Home">
+                        <svg class="nav__logo-icon" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#logo"></use>
+                        </svg>
+                        <span class="nav__logo-text">Danny's Crafts</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" data-nav-toggle>
+                    <span class="nav__toggle-icon"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul class="nav__menu" data-nav-menu>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#gallery" class="nav__link">Gallery</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Cart Icon -->
+                <div class="nav__cart">
+                    <button class="cart-button" aria-label="Shopping cart" data-cart-toggle>
+                        <svg class="cart-button__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#cart"></use>
+                        </svg>
+                        <span class="cart-button__count" data-cart-count>0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Handcrafted Dodgers Merchandise with Heart</h1>
+                    <p class="hero__subtitle">
+                        Every piece is carefully handmade in Los Angeles with passion, precision, and pride.
+                        Unique gifts for true fans, crafted by a U.S. Veteran.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#products" class="btn btn--primary btn--large">Shop Collection</a>
+                        <a href="#about" class="btn btn--secondary btn--large">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="hero__stats">
+                    <div class="stat-card">
+                        <svg class="stat-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#handmade"></use>
+                        </svg>
+                        <h3 class="stat-card__title">100% Handcrafted</h3>
+                        <p class="stat-card__text">Every item made with care</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#veteran"></use>
+                        </svg>
+                        <h3 class="stat-card__title">Veteran Owned</h3>
+                        <p class="stat-card__text">Built on service & integrity</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#location"></use>
+                        </svg>
+                        <h3 class="stat-card__title">LA Made</h3>
+                        <p class="stat-card__text">Local craftsmanship & pride</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Banner -->
+        <section class="featured-banner" aria-label="Featured announcements">
+            <div class="featured-banner__scroller">
+                <div class="featured-banner__item">
+                    <svg class="featured-banner__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#star"></use>
+                    </svg>
+                    <span>New arrivals weekly</span>
+                </div>
+                <div class="featured-banner__item">
+                    <svg class="featured-banner__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#custom"></use>
+                    </svg>
+                    <span>Custom orders welcome</span>
+                </div>
+                <div class="featured-banner__item">
+                    <svg class="featured-banner__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#truck"></use>
+                    </svg>
+                    <span>Free local pickup in LA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title">Featured Products</h2>
+                    <p class="section-header__subtitle">
+                        Browse our collection of handcrafted Dodgers merchandise.
+                        Each piece is unique and made with premium materials.
+                    </p>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="product-filters" role="group" aria-label="Product category filters">
+                    <button class="filter-button filter-button--active" data-filter="all">All Products</button>
+                    <button class="filter-button" data-filter="lamps">Lamps</button>
+                    <button class="filter-button" data-filter="keychains">Keychains</button>
+                    <button class="filter-button" data-filter="novelty">Novelty</button>
+                    <button class="filter-button" data-filter="other">Other</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" data-product-grid>
+                    <!-- Products will be dynamically loaded here via JavaScript -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="products__actions">
+                    <button class="btn btn--secondary" data-load-more>Load More Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content">
+                        <h2 class="about__title">Crafted with Passion in Los Angeles</h2>
+                        <p class="about__text">
+                            Every item in our collection is handcrafted with meticulous attention to detail.
+                            As a veteran-owned small business based in Los Angeles, we bring the same dedication
+                            and integrity from military service into every piece we create.
+                        </p>
+                        <p class="about__text">
+                            Our Dodgers-themed merchandise celebrates the team, the city, and the craftsmanship
+                            that goes into making each unique item. From custom lamps to keychains, every product
+                            tells a story of passion and pride.
+                        </p>
+
+                        <!-- Feature Highlights -->
+                        <div class="about__features">
+                            <div class="feature">
+                                <svg class="feature__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                    <use href="./assets/icons/sprite.svg#quality"></use>
+                                </svg>
+                                <div class="feature__content">
+                                    <h3 class="feature__title">Premium Materials</h3>
+                                    <p class="feature__text">Only the finest materials for lasting quality</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <svg class="feature__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                    <use href="./assets/icons/sprite.svg#custom"></use>
+                                </svg>
+                                <div class="feature__content">
+                                    <h3 class="feature__title">Custom Orders</h3>
+                                    <p class="feature__text">Personalized pieces made just for you</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <svg class="feature__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                    <use href="./assets/icons/sprite.svg#location"></use>
+                                </svg>
+                                <div class="feature__content">
+                                    <h3 class="feature__title">Local Pickup</h3>
+                                    <p class="feature__text">Meet us in Los Angeles for free pickup</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__image">
+                        <img src="./assets/images/about/workshop.jpg" alt="Danny's workshop with crafting tools and materials" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title">Gallery</h2>
+                    <p class="section-header__subtitle">
+                        Explore our craftsmanship through photos of finished products and works in progress.
+                    </p>
+                </div>
+
+                <div class="gallery__grid" data-gallery-grid>
+                    <!-- Gallery items will be dynamically loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title">What Customers Say</h2>
+                    <p class="section-header__subtitle">
+                        Real reviews from satisfied customers who love their handcrafted items.
+                    </p>
+                </div>
+
+                <div class="testimonials__carousel" data-testimonials-carousel>
+                    <!-- Testimonials will be dynamically loaded here via JavaScript -->
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-control carousel-control--prev" aria-label="Previous testimonial" data-carousel-prev>
+                        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#chevron-left"></use>
+                        </svg>
+                    </button>
+                    <button class="carousel-control carousel-control--next" aria-label="Next testimonial" data-carousel-next>
+                        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#chevron-right"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="carousel-dots" data-carousel-dots>
+                    <!-- Dots will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title">Get in Touch</h2>
+                    <p class="section-header__subtitle">
+                        Have a question or want to place a custom order? We'd love to hear from you.
+                    </p>
+                </div>
+
+                <div class="contact__grid">
+                    <!-- Contact Form -->
+                    <div class="contact__form-wrapper">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Name</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" required aria-required="true">
+                                <span class="form-error" data-error="name"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">Email</label>
+                                <input type="email" id="contact-email" name="email" class="form-input" required aria-required="true">
+                                <span class="form-error" data-error="email"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" class="form-input" required aria-required="true">
+                                <span class="form-error" data-error="subject"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea id="contact-message" name="message" class="form-textarea" rows="6" required aria-required="true"></textarea>
+                                <span class="form-error" data-error="message"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--large">Send Message</button>
+                        </form>
+
+                        <div class="contact-form__success" data-success-message hidden>
+                            <svg class="success-icon" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#check-circle"></use>
+                            </svg>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact__info">
+                        <div class="contact-card">
+                            <svg class="contact-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#location"></use>
+                            </svg>
+                            <h3 class="contact-card__title">Location</h3>
+                            <p class="contact-card__text">Los Angeles, California</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <svg class="contact-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#email"></use>
+                            </svg>
+                            <h3 class="contact-card__title">Email</h3>
+                            <p class="contact-card__text">
+                                <a href="mailto:danny@dannyscrafts.com">danny@dannyscrafts.com</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-card">
+                            <svg class="contact-card__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#clock"></use>
+                            </svg>
+                            <h3 class="contact-card__title">Response Time</h3>
+                            <p class="contact-card__text">Within 24-48 hours</p>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="contact__social">
+                            <h3 class="contact__social-title">Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="./assets/icons/sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="./assets/icons/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="./assets/icons/sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Brand Column -->
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                            <use href="./assets/icons/sprite.svg#logo"></use>
+                        </svg>
+                        <span class="footer__logo-text">Danny's Crafts</span>
+                    </div>
+                    <p class="footer__tagline">Handcrafted Merchandise with Heart</p>
+                    <p class="footer__description">
+                        Veteran-owned small business crafting unique Dodgers-themed merchandise in Los Angeles, California.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__links">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#products" class="footer__link">Products</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#gallery" class="footer__link">Gallery</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information Links -->
+                <div class="footer__links">
+                    <h3 class="footer__heading">Information</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Shipping Info</a></li>
+                        <li><a href="#" class="footer__link">Returns Policy</a></li>
+                        <li><a href="#" class="footer__link">FAQ</a></li>
+                        <li><a href="#" class="footer__link">Care Guide</a></li>
+                        <li><a href="#" class="footer__link">Custom Orders</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div class="footer__links">
+                    <h3 class="footer__heading">Connect</h3>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                <use href="./assets/icons/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Danny's Dodgers Crafts. All rights reserved.
+                </p>
+                <p class="footer__credit">
+                    Website by <a href="#" class="footer__credit-link">digiSpace</a> - Building presence, precision, and possibility
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <span class="footer__separator">|</span>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <use href="./assets/icons/sprite.svg#chevron-up"></use>
+        </svg>
+    </button>
+
+    <!-- Modal for Image Lightbox -->
+    <div class="modal" id="lightbox-modal" data-modal hidden>
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Close modal" data-modal-close>
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="./assets/icons/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__body">
+                <img src="" alt="" class="modal__image" data-modal-image>
+            </div>
+            <div class="modal__controls">
+                <button class="modal__control modal__control--prev" aria-label="Previous image" data-modal-prev>
+                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#chevron-left"></use>
+                    </svg>
+                </button>
+                <button class="modal__control modal__control--next" aria-label="Next image" data-modal-next>
+                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                        <use href="./assets/icons/sprite.svg#chevron-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="./js/config.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/components/navigation.js"></script>
+    <script src="./js/components/modal.js"></script>
+    <script src="./js/components/carousel.js"></script>
+    <script src="./js/components/gallery.js"></script>
+    <script src="./js/components/product-grid.js"></script>
+    <script src="./js/components/contact-form.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "text": "Absolutely love the custom lamp I ordered! The craftsmanship is exceptional and it looks amazing in my office. Danny was professional and delivered exactly what I wanted.",
+    "author": "Michael Rodriguez",
+    "location": "Los Angeles, CA",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "text": "The keychain I bought as a gift was a huge hit! Great quality and attention to detail. Will definitely be ordering more for other friends and family.",
+    "author": "Sarah Chen",
+    "location": "Pasadena, CA",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "text": "Supporting a veteran-owned business while getting amazing handcrafted items is a win-win. The coaster set is beautiful and functional. Highly recommend!",
+    "author": "James Thompson",
+    "location": "Santa Monica, CA",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "text": "As a lifelong Dodgers fan, I appreciate the care that goes into each piece. Danny's work captures the spirit of the team perfectly. The lamp I ordered is a conversation starter!",
+    "author": "Maria Gonzales",
+    "location": "Long Beach, CA",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "text": "Exceptional quality and reasonable prices. The custom order process was smooth and Danny kept me updated throughout. Could not be happier with my purchase!",
+    "author": "David Park",
+    "location": "Glendale, CA",
+    "rating": 5
+  }
+]
