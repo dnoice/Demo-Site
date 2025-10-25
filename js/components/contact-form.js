@@ -84,14 +84,15 @@
                     // Reset form
                     form.reset();
 
+                    if (window.Toast) Toast.success('Message sent successfully!');
                     utils.announce('Message sent successfully');
                 } else {
-                    alert('Error sending message. Please try again.');
+                    if (window.Toast) Toast.error('Error sending message. Please try again.');
                 }
 
             } catch (error) {
                 console.error('Form submission error:', error);
-                alert('Error sending message. Please try again.');
+                if (window.Toast) Toast.error('Error sending message. Please try again.');
             } finally {
                 setFormDisabled(form, false);
                 if (submitButton) {
