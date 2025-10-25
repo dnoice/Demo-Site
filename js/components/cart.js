@@ -17,6 +17,7 @@
         createCartModal();
         loadCart();
         setupEventListeners();
+        setupEventDelegation();
     }
 
     function createCartModal() {
@@ -71,8 +72,14 @@
     }
 
     function loadCart() {
-        cartItems = API.getCart();
-        renderCart();
+        try {
+            cartItems = API.getCart();
+            renderCart();
+        } catch (error) {
+            console.error('Error loading cart:', error);
+            cartItems = [];
+            renderCart();
+        }
     }
 
     function setupEventListeners() {
@@ -135,23 +142,28 @@
 
         const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         totalElement.textContent = utils.formatPrice(total);
-
-        setupQuantityButtons();
     }
 
-    function setupQuantityButtons() {
-        cartModal.querySelectorAll('[data-increase]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const productId = parseInt(btn.dataset.increase);
-                updateQuantity(productId, 1);
-            });
-        });
+    /**
+     * Setup event delegation for quantity buttons to avoid memory leaks
+     * Instead of adding listeners to each button on every render,
+     * we use a single listener on the parent container
+     */
+    function setupEventDelegation() {
+        const itemsContainer = cartModal.querySelector('[data-cart-items]');
+        if (!itemsContainer) return;
 
-        cartModal.querySelectorAll('[data-decrease]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const productId = parseInt(btn.dataset.decrease);
+        itemsContainer.addEventListener('click', (e) => {
+            const increaseBtn = e.target.closest('[data-increase]');
+            const decreaseBtn = e.target.closest('[data-decrease]');
+
+            if (increaseBtn) {
+                const productId = parseInt(increaseBtn.dataset.increase);
+                updateQuantity(productId, 1);
+            } else if (decreaseBtn) {
+                const productId = parseInt(decreaseBtn.dataset.decrease);
                 updateQuantity(productId, -1);
-            });
+            }
         });
     }
 
@@ -166,7 +178,12 @@
             if (window.Toast) Toast.info('Item removed from cart');
         }
 
-        utils.storage.set(CONFIG.storage.cart, cartItems);
+        try {
+            utils.storage.set(CONFIG.storage.cart, cartItems);
+        } catch (error) {
+            console.error('Error saving cart:', error);
+            if (window.Toast) Toast.error('Could not save cart. Storage may be disabled.');
+        }
         renderCart();
         window.dispatchEvent(new CustomEvent('cartUpdated'));
     }
@@ -191,7 +208,12 @@
             cartItems.push({ ...product, quantity: 1 });
         }
 
-        utils.storage.set(CONFIG.storage.cart, cartItems);
+        try {
+            utils.storage.set(CONFIG.storage.cart, cartItems);
+        } catch (error) {
+            console.error('Error saving cart:', error);
+            if (window.Toast) Toast.error('Could not save cart. Storage may be disabled.');
+        }
         renderCart();
 
         if (window.Toast) Toast.success('Added to cart!');
@@ -206,7 +228,12 @@
 
     function clearCart() {
         cartItems = [];
-        utils.storage.set(CONFIG.storage.cart, cartItems);
+        try {
+            utils.storage.set(CONFIG.storage.cart, cartItems);
+        } catch (error) {
+            console.error('Error clearing cart:', error);
+            if (window.Toast) Toast.error('Could not clear cart. Storage may be disabled.');
+        }
         renderCart();
         window.dispatchEvent(new CustomEvent('cartUpdated'));
         if (window.Toast) Toast.info('Cart cleared');
