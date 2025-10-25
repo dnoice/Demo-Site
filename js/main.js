@@ -12,10 +12,12 @@
 
     function init() {
         setupSmoothScrolling();
-        setupBackToTop();
+        setupScrollEffects(); // Consolidated scroll handlers
         setupCartCount();
-        setupScrollHeader();
         handleExternalLinks();
+        setupCartToggle();
+        setupKeyboardHandlers();
+        logDevInfo();
 
         // Announce page loaded for screen readers
         utils.announce('Page loaded successfully');
@@ -57,36 +59,49 @@
     }
 
     /**
-     * Setup back to top button
+     * Setup scroll-based effects (consolidated for performance)
+     * Handles back-to-top button and header shadow in one scroll listener
      */
-    function setupBackToTop() {
+    function setupScrollEffects() {
         const backToTop = utils.qs('#back-to-top');
-        if (!backToTop) return;
-
+        const header = utils.qs('.header');
         const scrollThreshold = CONFIG.animation.scrollThreshold;
 
-        // Show/hide button based on scroll position
+        // Consolidated scroll handler for better performance
         const handleScroll = utils.throttle(() => {
-            const shouldShow = window.pageYOffset > scrollThreshold;
-            utils.toggleClass(backToTop, 'visible', shouldShow);
+            const scrollY = window.pageYOffset;
 
-            if (shouldShow) {
-                utils.show(backToTop);
-            } else {
-                utils.hide(backToTop);
+            // Back to top button visibility
+            if (backToTop) {
+                const shouldShow = scrollY > scrollThreshold;
+                utils.toggleClass(backToTop, 'visible', shouldShow);
+
+                if (shouldShow) {
+                    utils.show(backToTop);
+                } else {
+                    utils.hide(backToTop);
+                }
+            }
+
+            // Header shadow effect
+            if (header) {
+                const shouldAddShadow = scrollY > 10;
+                header.style.boxShadow = shouldAddShadow ? 'var(--shadow-md)' : 'var(--shadow-sm)';
             }
         }, 100);
 
         utils.on(window, 'scroll', handleScroll);
 
-        // Scroll to top on click
-        utils.on(backToTop, 'click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        // Back to top click handler
+        if (backToTop) {
+            utils.on(backToTop, 'click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                utils.announce('Scrolled to top of page');
             });
-            utils.announce('Scrolled to top of page');
-        });
+        }
     }
 
     /**
@@ -128,25 +143,6 @@
     }
 
     /**
-     * Add shadow to header on scroll
-     */
-    function setupScrollHeader() {
-        const header = utils.qs('.header');
-        if (!header) return;
-
-        const handleScroll = utils.throttle(() => {
-            const shouldAddShadow = window.pageYOffset > 10;
-            if (shouldAddShadow) {
-                header.style.boxShadow = 'var(--shadow-md)';
-            } else {
-                header.style.boxShadow = 'var(--shadow-sm)';
-            }
-        }, 100);
-
-        utils.on(window, 'scroll', handleScroll);
-    }
-
-    /**
      * Handle external links - open in new tab
      */
     function handleExternalLinks() {
@@ -164,50 +160,58 @@
     }
 
     /**
-     * Cart toggle functionality
+     * Setup cart toggle functionality
      */
-    const cartToggle = utils.qs('[data-cart-toggle]');
-    if (cartToggle) {
-        utils.on(cartToggle, 'click', () => {
-            if (window.Cart) {
-                Cart.open();
+    function setupCartToggle() {
+        const cartToggle = utils.qs('[data-cart-toggle]');
+        if (cartToggle) {
+            utils.on(cartToggle, 'click', () => {
+                if (window.Cart) {
+                    Cart.open();
+                }
+            });
+        }
+    }
+
+    /**
+     * Setup keyboard navigation handlers
+     */
+    function setupKeyboardHandlers() {
+        document.addEventListener('keydown', (e) => {
+            // ESC key closes modals
+            if (e.key === 'Escape') {
+                const modal = utils.qs('.modal:not([hidden])');
+                if (modal) {
+                    const closeButton = modal.querySelector('[data-modal-close]');
+                    if (closeButton) closeButton.click();
+                }
+
+                // Close mobile menu
+                const navMenu = utils.qs('[data-nav-menu]');
+                if (navMenu && utils.hasClass(navMenu, 'active')) {
+                    const toggle = utils.qs('[data-nav-toggle]');
+                    if (toggle) toggle.click();
+                }
             }
         });
     }
 
     /**
-     * Handle keyboard navigation
-     */
-    document.addEventListener('keydown', (e) => {
-        // ESC key closes modals
-        if (e.key === 'Escape') {
-            const modal = utils.qs('.modal:not([hidden])');
-            if (modal) {
-                const closeButton = modal.querySelector('[data-modal-close]');
-                if (closeButton) closeButton.click();
-            }
-
-            // Close mobile menu
-            const navMenu = utils.qs('[data-nav-menu]');
-            if (navMenu && utils.hasClass(navMenu, 'active')) {
-                const toggle = utils.qs('[data-nav-toggle]');
-                if (toggle) toggle.click();
-            }
-        }
-    });
-
-    /**
      * Log site info to console (for development)
      */
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        console.log('%c' + CONFIG.siteName, 'font-size: 24px; font-weight: bold; color: #008b8b;');
-        console.log('%c' + CONFIG.siteTagline, 'font-size: 14px; color: #666;');
-        console.log('%cDeveloped by digiSpace', 'font-size: 12px; font-style: italic; color: #999;');
-        console.log('');
-        console.log('Available global objects:');
-        console.log('- CONFIG: Site configuration');
-        console.log('- utils: Utility functions');
-        console.log('- API: Mock API for data');
+    function logDevInfo() {
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log('%c' + CONFIG.siteName, 'font-size: 24px; font-weight: bold; color: #008b8b;');
+            console.log('%c' + CONFIG.siteTagline, 'font-size: 14px; color: #666;');
+            console.log('%cDeveloped by digiSpace', 'font-size: 12px; font-style: italic; color: #999;');
+            console.log('');
+            console.log('Available global objects:');
+            console.log('- CONFIG: Site configuration');
+            console.log('- utils: Utility functions');
+            console.log('- API: Mock API for data');
+            console.log('- Cart: Shopping cart (V2)');
+            console.log('- Toast: Notifications (V2)');
+        }
     }
 
 })();
