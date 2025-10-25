@@ -140,6 +140,28 @@ section {
     white-space: nowrap;
     min-height: var(--touch-target);
     border: 2px solid transparent;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+    width: 400px;
+    height: 400px;
+    transition: width 0s, height 0s;
 }
 
 .btn:focus-visible {
@@ -150,16 +172,18 @@ section {
 .btn--primary {
     background-color: var(--color-primary-500);
     color: var(--color-text-inverse);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn--primary:hover {
     background-color: var(--color-primary-600);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn--primary:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 .btn--secondary {
@@ -171,6 +195,11 @@ section {
 .btn--secondary:hover {
     background-color: var(--color-primary-alpha-10);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary:active {
+    transform: translateY(0);
 }
 
 .btn--large {
@@ -181,7 +210,12 @@ section {
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    transform: none;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn:disabled:hover {
+    background-color: var(--color-primary-500);
 }
 
 /* Cards */
@@ -285,12 +319,12 @@ section {
     position: fixed;
     bottom: var(--space-6);
     right: var(--space-6);
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background-color: var(--color-primary-500);
     color: var(--color-text-inverse);
     border-radius: var(--radius-full);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-xl);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,16 +332,49 @@ section {
     transition: all var(--transition-base);
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back-to-top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-full);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
 }
 
 .back-to-top:hover {
     background-color: var(--color-primary-600);
-    transform: translateY(-4px);
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: var(--shadow-2xl);
+}
+
+.back-to-top:hover::before {
+    opacity: 1;
+}
+
+.back-to-top:active {
+    transform: translateY(-4px) scale(1.05);
 }
 
 .back-to-top.visible {
     opacity: 1;
     visibility: visible;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Focus Visible (for better keyboard navigation) */

@@ -141,28 +141,26 @@
                 button.textContent = 'Adding...';
 
                 try {
-                    const result = await API.addToCart(productId);
+                    const product = await API.getProductById(productId);
 
-                    if (result.success) {
-                        // Show success feedback
+                    if (product && window.Cart) {
+                        // Use new Cart component
+                        Cart.add(product);
+
+                        // Show success feedback on button
                         button.textContent = 'Added!';
-                        utils.addClass(button, 'btn--success');
-
-                        // Dispatch cart updated event
-                        window.dispatchEvent(new CustomEvent('cartUpdated'));
-
-                        // Show notification
-                        utils.announce('Item added to cart');
 
                         // Reset button after delay
                         setTimeout(() => {
                             button.textContent = originalText;
                             button.disabled = false;
-                            utils.removeClass(button, 'btn--success');
-                        }, 2000);
+                        }, 1500);
 
                     } else {
                         button.textContent = 'Error';
+                        if (window.Toast) {
+                            Toast.error('Product not found');
+                        }
                         setTimeout(() => {
                             button.textContent = originalText;
                             button.disabled = false;
@@ -172,6 +170,9 @@
                 } catch (error) {
                     console.error('Error adding to cart:', error);
                     button.textContent = 'Error';
+                    if (window.Toast) {
+                        Toast.error('Failed to add item');
+                    }
                     setTimeout(() => {
                         button.textContent = originalText;
                         button.disabled = false;

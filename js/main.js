@@ -106,7 +106,9 @@
         const cartCountElement = utils.qs('[data-cart-count]');
         if (!cartCountElement) return;
 
-        const count = API.getCartCount();
+        const count = window.Cart ? Cart.getCount() : API.getCartCount();
+        const oldCount = parseInt(cartCountElement.textContent) || 0;
+
         cartCountElement.textContent = count;
 
         // Hide count badge if cart is empty
@@ -114,6 +116,14 @@
             cartCountElement.style.display = 'none';
         } else {
             cartCountElement.style.display = 'flex';
+
+            // Add pulse animation if count increased
+            if (count > oldCount) {
+                utils.addClass(cartCountElement, 'updated');
+                setTimeout(() => {
+                    utils.removeClass(cartCountElement, 'updated');
+                }, 500);
+            }
         }
     }
 
@@ -154,27 +164,14 @@
     }
 
     /**
-     * Cart toggle functionality (for future cart sidebar)
+     * Cart toggle functionality
      */
     const cartToggle = utils.qs('[data-cart-toggle]');
     if (cartToggle) {
         utils.on(cartToggle, 'click', () => {
-            // For demo purposes, show alert with cart count
-            const count = API.getCartCount();
-            const cart = API.getCart();
-
-            if (count === 0) {
-                alert('Your cart is empty!');
-            } else {
-                const items = cart.map(item =>
-                    `${item.title} x${item.quantity} - ${utils.formatPrice(item.price * item.quantity)}`
-                ).join('\n');
-
-                const total = cart.reduce((sum, item) =>
-                    sum + (item.price * item.quantity), 0
-                );
-
-                alert(`Cart Items (${count}):\n\n${items}\n\nTotal: ${utils.formatPrice(total)}\n\n(This is a demo - no actual checkout available)`);
+            // Open cart modal
+            if (window.Cart) {
+                Cart.open();
             }
         });
     }
