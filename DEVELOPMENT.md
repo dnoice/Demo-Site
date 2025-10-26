@@ -220,7 +220,7 @@ Demo-Site/
 │   └── images/                     # Images
 │       ├── products/               # Product photos
 │       ├── gallery/                # Gallery images
-│       └── og-image.jpg            # Social sharing image
+│       └── og-image.png            # Social sharing image
 │
 ├── data/                           # Mock data (JSON)
 │   ├── products.json               # Product catalog

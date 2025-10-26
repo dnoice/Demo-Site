@@ -197,15 +197,15 @@ danny-dodgers-crafts/
 ├── assets/                             # Static assets
 │   ├── images/                         # Image files
 │   │   ├── products/                   # Product photography
-│   │   │   ├── lamp-01.jpg
-│   │   │   ├── keychain-01.jpg
+│   │   │   ├── lamp-01.png
+│   │   │   ├── keychain-01.png
 │   │   │   └── ... (more products)
 │   │   ├── gallery/                    # Gallery images
-│   │   │   ├── item-01.jpg
+│   │   │   ├── item-01.png
 │   │   │   └── ... (more gallery items)
 │   │   ├── about/                      # About section images
-│   │   │   └── workshop.jpg
-│   │   └── og-image.jpg                # Open Graph/social sharing image
+│   │   │   └── workshop.png
+│   │   └── og-image.png                # Open Graph/social sharing image
 │   │
 │   └── icons/                          # SVG icons
 │       ├── sprite.svg                  # SVG sprite sheet (all icons)
@@ -261,10 +261,10 @@ danny-dodgers-crafts/
 **Examples:**
 - ✅ `product-grid.js`
 - ✅ `contact-form.css`
-- ✅ `lamp-01.jpg`
+- ✅ `lamp-01.png`
 - ❌ `ProductGrid.js`
 - ❌ `contact_form.css`
-- ❌ `Lamp1.jpg`
+- ❌ `Lamp1.png`
 
 ### CSS Classes
 **Pattern:** Block Element Modifier (BEM-inspired)
@@ -338,10 +338,10 @@ data-gallery-item
 **Pattern:** `category-descriptor-number.extension`
 
 **Examples:**
-- `lamp-01.jpg`
-- `keychain-baseball-02.jpg`
-- `gallery-workshop-01.jpg`
-- `about-workshop.jpg`
+- `lamp-01.png`
+- `keychain-baseball-02.png`
+- `gallery-workshop-01.png`
+- `about-workshop.png`
 
 **Requirements:**
 - Descriptive but not too long

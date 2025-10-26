@@ -7,48 +7,48 @@ This demo website requires product images to be fully functional. The HTML and J
 ## Required Images
 
 ### Products Directory (`assets/images/products/`)
-- `lamp-01.jpg` - Classic Dodgers Table Lamp
-- `lamp-02.jpg` - Vintage Baseball Desk Lamp
-- `lamp-03.jpg` - Night Light with Team Logo
-- `keychain-01.jpg` - Stadium Miniature Keychain
-- `keychain-02.jpg` - Team Cap Keychain
-- `keychain-03.jpg` - Pennant Keychain
-- `keychain-04.jpg` - Baseball Bat Keychain
-- `novelty-01.jpg` - Dodgers Coaster Set
-- `novelty-02.jpg` - Baseball Bat Bottle Opener
-- `novelty-03.jpg` - Vintage Stadium Clock
-- `other-01.jpg` - Custom Card Holder
-- `other-02.jpg` - Stadium Blueprint Art
+- `lamp-01.png` - Classic Dodgers Table Lamp
+- `lamp-02.png` - Vintage Baseball Desk Lamp
+- `lamp-03.png` - Night Light with Team Logo
+- `keychain-01.png` - Stadium Miniature Keychain
+- `keychain-02.png` - Team Cap Keychain
+- `keychain-03.png` - Pennant Keychain
+- `keychain-04.png` - Baseball Bat Keychain
+- `novelty-01.png` - Dodgers Coaster Set
+- `novelty-02.png` - Baseball Bat Bottle Opener
+- `novelty-03.png` - Vintage Stadium Clock
+- `other-01.png` - Custom Card Holder
+- `other-02.png` - Stadium Blueprint Art
 
 **Specifications:**
-- Format: JPG or PNG
+- Format: PNG
 - Dimensions: 800x600px (minimum)
 - File size: <200KB (optimized for web)
 - Aspect ratio: 4:3 recommended
 
 ### Gallery Directory (`assets/images/gallery/`)
-- `item-01.jpg` through `item-08.jpg`
+- `item-01.png` through `item-08.png`
 
 **Specifications:**
-- Format: JPG or PNG
+- Format: PNG
 - Dimensions: 1200x1200px (minimum)
 - File size: <300KB (optimized for web)
 - Aspect ratio: 1:1 (square) recommended
 
 ### About Directory (`assets/images/about/`)
-- `workshop.jpg` - Workshop/crafting environment photo
+- `workshop.png` - Workshop/crafting environment photo
 
 **Specifications:**
-- Format: JPG or PNG
+- Format: PNG
 - Dimensions: 1200x800px (minimum)
 - File size: <250KB (optimized for web)
 - Aspect ratio: 3:2 recommended
 
 ### Open Graph Image (Root level)
-- `og-image.jpg` - Social media sharing image
+- `og-image.png` - Social media sharing image
 
 **Specifications:**
-- Format: JPG or PNG
+- Format: PNG
 - Dimensions: 1200x630px (Facebook/LinkedIn standard)
 - File size: <300KB
 
@@ -63,12 +63,12 @@ This demo website requires product images to be fully functional. The HTML and J
 2. **Compress images** to reduce file size
    - Use [TinyPNG.com](https://tinypng.com)
    - Or [Squoosh.app](https://squoosh.app)
-   - Target: 70-85% quality for JPG
+   - Target: Optimized PNG compression
 
 3. **Use correct format**
-   - JPG for photographs
-   - PNG for graphics with transparency
-   - WebP for modern browsers (with JPG fallback)
+   - PNG for all product and gallery images
+   - Ensures consistent quality and transparency support
+   - WebP for modern browsers (with PNG fallback)
 
 ## Photography Tips
 
