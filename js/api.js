@@ -9,7 +9,7 @@ const API = {
             category: 'lamps',
             price: 65,
             description: 'Handcrafted table lamp featuring authentic Dodgers design elements. Perfect for the home or office.',
-            image: './assets/images/products/lamp-01.jpg',
+            image: './assets/images/products/lamp-01.png',
             featured: true
         },
         {
@@ -18,7 +18,7 @@ const API = {
             category: 'keychains',
             price: 12,
             description: 'Detailed miniature stadium keychain made from premium materials. A perfect gift for any fan.',
-            image: './assets/images/products/keychain-01.jpg',
+            image: './assets/images/products/keychain-01.png',
             featured: false
         },
         {
@@ -27,7 +27,7 @@ const API = {
             category: 'lamps',
             price: 48,
             description: 'Unique desk lamp with vintage baseball design. Adds character to any workspace.',
-            image: './assets/images/products/lamp-02.jpg',
+            image: './assets/images/products/lamp-02.png',
             featured: false
         },
         {
@@ -36,7 +36,7 @@ const API = {
             category: 'keychains',
             price: 8,
             description: 'Miniature team cap keychain, meticulously crafted with attention to detail.',
-            image: './assets/images/products/keychain-02.jpg',
+            image: './assets/images/products/keychain-02.png',
             featured: false
         },
         {
@@ -45,7 +45,7 @@ const API = {
             category: 'novelty',
             price: 24,
             description: 'Set of 4 handcrafted coasters featuring team colors and logo. Protects surfaces in style.',
-            image: './assets/images/products/novelty-01.jpg',
+            image: './assets/images/products/novelty-01.png',
             featured: true
         },
         {
@@ -54,7 +54,7 @@ const API = {
             category: 'novelty',
             price: 18,
             description: 'Functional bottle opener shaped like a miniature baseball bat. Great conversation starter.',
-            image: './assets/images/products/novelty-02.jpg',
+            image: './assets/images/products/novelty-02.png',
             featured: false
         },
         {
@@ -63,7 +63,7 @@ const API = {
             category: 'lamps',
             price: 32,
             description: 'Soft LED night light featuring team logo. Perfect for bedrooms or hallways.',
-            image: './assets/images/products/lamp-03.jpg',
+            image: './assets/images/products/lamp-03.png',
             featured: false
         },
         {
@@ -72,7 +72,7 @@ const API = {
             category: 'keychains',
             price: 10,
             description: 'Classic pennant design miniaturized into a quality keychain accessory.',
-            image: './assets/images/products/keychain-03.jpg',
+            image: './assets/images/products/keychain-03.png',
             featured: false
         },
         {
@@ -81,7 +81,7 @@ const API = {
             category: 'novelty',
             price: 48,
             description: 'Wall clock featuring vintage stadium imagery. Functional art for true fans.',
-            image: './assets/images/products/novelty-03.jpg',
+            image: './assets/images/products/novelty-03.png',
             featured: false
         },
         {
@@ -90,7 +90,7 @@ const API = {
             category: 'keychains',
             price: 15,
             description: 'Detailed miniature baseball bat keychain with authentic wood finish.',
-            image: './assets/images/products/keychain-04.jpg',
+            image: './assets/images/products/keychain-04.png',
             featured: false
         },
         {
@@ -99,7 +99,7 @@ const API = {
             category: 'other',
             price: 42,
             description: 'Handcrafted card holder with team design. Keeps cards organized in style.',
-            image: './assets/images/products/other-01.jpg',
+            image: './assets/images/products/other-01.png',
             featured: false
         },
         {
@@ -108,7 +108,7 @@ const API = {
             category: 'other',
             price: 55,
             description: 'Framed blueprint-style art of the stadium. Unique wall decor for fans.',
-            image: './assets/images/products/other-02.jpg',
+            image: './assets/images/products/other-02.png',
             featured: true
         }
     ],
@@ -117,49 +117,49 @@ const API = {
     gallery: [
         {
             id: 1,
-            image: './assets/images/gallery/item-01.jpg',
+            image: './assets/images/gallery/item-01.png',
             caption: 'Custom Dodgers lamp in progress',
             alt: 'Handcrafted Dodgers lamp being assembled in workshop'
         },
         {
             id: 2,
-            image: './assets/images/gallery/item-02.jpg',
+            image: './assets/images/gallery/item-02.png',
             caption: 'Keychain collection',
             alt: 'Various handcrafted Dodgers keychains on display'
         },
         {
             id: 3,
-            image: './assets/images/gallery/item-03.jpg',
+            image: './assets/images/gallery/item-03.png',
             caption: 'Workshop detail',
             alt: 'Close-up of crafting tools and materials'
         },
         {
             id: 4,
-            image: './assets/images/gallery/item-04.jpg',
+            image: './assets/images/gallery/item-04.png',
             caption: 'Finished lamp display',
             alt: 'Completed Dodgers lamp on display'
         },
         {
             id: 5,
-            image: './assets/images/gallery/item-05.jpg',
+            image: './assets/images/gallery/item-05.png',
             caption: 'Novelty items collection',
             alt: 'Assortment of novelty Dodgers items'
         },
         {
             id: 6,
-            image: './assets/images/gallery/item-06.jpg',
+            image: './assets/images/gallery/item-06.png',
             caption: 'Custom order in progress',
             alt: 'Custom Dodgers merchandise being crafted'
         },
         {
             id: 7,
-            image: './assets/images/gallery/item-07.jpg',
+            image: './assets/images/gallery/item-07.png',
             caption: 'Paint and finish details',
             alt: 'Detailed painting work on merchandise'
         },
         {
             id: 8,
-            image: './assets/images/gallery/item-08.jpg',
+            image: './assets/images/gallery/item-08.png',
             caption: 'Final product showcase',
             alt: 'Showcase of finished handcrafted products'
         }
